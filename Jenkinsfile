@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = "php-app" // Replace with your Docker image name
+        DOCKER_IMAGE = "php" // Replace with your Docker image name
         DOCKER_TAG = "latest"
         DB_CONTAINER = "mysql-db" // Replace with your database container name
         APP_CONTAINER = "php-app" // Replace with your PHP app container name
