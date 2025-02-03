@@ -29,11 +29,11 @@ pipeline {
         stage('Deploy Docker Environment') {
             steps {
                 script {
-                    // Start MySQL database container
-                    sh "docker run -d --name ${DB_CONTAINER} -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=app_db mysql:5.7"
+                     // Start MySQL database container
+                    bat "docker run -d --name ${DB_CONTAINER} -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=app_db mysql:5.7"
 
                     // Start PHP application container and link it to the DB container
-                    sh "docker run -d --name ${APP_CONTAINER} --link ${DB_CONTAINER}:mysql -p 80:80 ${DOCKER_IMAGE}:${DOCKER_TAG}"
+                    bat "docker run -d --name ${APP_CONTAINER} --link ${DB_CONTAINER}:mysql -p 80:80 ${DOCKER_IMAGE}:${DOCKER_TAG}"
                 }
             }
         }
