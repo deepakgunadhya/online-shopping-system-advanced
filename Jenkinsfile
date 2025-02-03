@@ -20,13 +20,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-             def dockerInstalled = powershell(returnStatus: true, script: 'docker --version')
-                    if (dockerInstalled == 0) {
-                        echo "Docker is installed."
-                    } else {
-                        error "Docker is NOT installed!"
-                    }
-                    docker.build("${DOCKER_IMAGE}:${DOCKER_TAG}", ".")
+                 bat "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} ."
                 }
             }
         }
