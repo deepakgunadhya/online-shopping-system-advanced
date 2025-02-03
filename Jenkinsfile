@@ -20,7 +20,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-            def dockerInstalled = sh(script: 'docker --version', returnStatus: true)
+             def dockerInstalled = sh(script: 'docker --version', returnStatus: true)
                     if (dockerInstalled == 0) {
                         echo "Docker is installed."
                     } else {
