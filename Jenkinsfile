@@ -20,6 +20,8 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
+                       sh "which docker || echo 'Docker not found'"
+            sh "docker --version || echo 'Docker command failed'"
                     docker.build("${DOCKER_IMAGE}:${DOCKER_TAG}", ".")
                 }
             }
