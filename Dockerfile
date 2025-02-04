@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y \
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Install PHP dependencies
-RUN composer install --no-dev --optimize-autoloader --no-interaction --no-progress
+#RUN composer install --no-dev --optimize-autoloader --no-interaction --no-progress
 
 # Expose port 80
 EXPOSE 80
