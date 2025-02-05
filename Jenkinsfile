@@ -27,7 +27,7 @@ pipeline {
             steps {
                 script {
                     bat '''
-                     cd D:\WorkNXL\worknxl
+                     cd D:\\WorkNXL\\worknxl
                      mvn test
                     '''
                 }
