@@ -66,10 +66,10 @@ echo "Running automation code."
             // bat "docker rm ${APP_CONTAINER} || true"
             //  bat "docker stop ${DB_CONTAINER} || true"
             //    bat "docker rm ${DB_CONTAINER} || true"
-                bat "docker stop ${APP_CONTAINER}"
-                bat "docker rm ${APP_CONTAINER}"
-                bat "docker stop ${DB_CONTAINER}"
-                bat "docker rm ${DB_CONTAINER}"
+                // bat "docker stop ${APP_CONTAINER}"
+                // bat "docker rm ${APP_CONTAINER}"
+                // bat "docker stop ${DB_CONTAINER}"
+                // bat "docker rm ${DB_CONTAINER}"
             }
         }
     }
