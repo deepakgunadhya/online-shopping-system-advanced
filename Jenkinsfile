@@ -22,7 +22,13 @@ pipeline {
                 }
             }
         }
-
+ stage('Verify Setup') {
+            steps {
+                script {
+                    bat 'docker ps'
+                }
+            }
+        }
         stage('Run Java Automation Tests') {
             steps {
                 script {
