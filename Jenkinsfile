@@ -32,10 +32,7 @@ pipeline {
         stage('Run Java Automation Tests') {
             steps {
                 script {
-                    bat '''
-                     cd D:\\WorkNXL\\worknxl
-                     mvn test
-                    '''
+                    bat 'cd /D D:\\WorkNXL\\worknxl && mvn test'
                 }
             }
         }
