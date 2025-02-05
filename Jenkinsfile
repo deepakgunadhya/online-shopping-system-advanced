@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'master', url: 'https://github.com/PuneethReddyHC/online-shopping-system-advanced.git'
+                git branch: 'master', url: 'https://github.com/deepakgunadhya/online-shopping-system-advanced.git'
             }
         }
 
