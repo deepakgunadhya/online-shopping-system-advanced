@@ -62,10 +62,14 @@ echo "Running automation code."
             // Clean up Docker containers
             script {
                 echo "clean up docker containers"
-            bat "docker stop ${APP_CONTAINER} || true"
-            bat "docker rm ${APP_CONTAINER} || true"
-             bat "docker stop ${DB_CONTAINER} || true"
-               bat "docker rm ${DB_CONTAINER} || true"
+            // bat "docker stop ${APP_CONTAINER} || true"
+            // bat "docker rm ${APP_CONTAINER} || true"
+            //  bat "docker stop ${DB_CONTAINER} || true"
+            //    bat "docker rm ${DB_CONTAINER} || true"
+                bat "docker stop ${APP_CONTAINER}"
+                bat "docker rm ${APP_CONTAINER}"
+                bat "docker stop ${DB_CONTAINER}"
+                bat "docker rm ${DB_CONTAINER}"
             }
         }
     }
